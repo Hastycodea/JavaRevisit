@@ -23,6 +23,7 @@ public class PartOne {
         System.out.println("Quotient: " + quotient);
         System.out.println("Remainder: " + remainder);
         System.out.println();
+        System.out.println();
 
         if (firstInteger % secondInteger == 0) {
             System.out.println(firstInteger + " is divisible by " + secondInteger);                        
@@ -30,6 +31,8 @@ public class PartOne {
             System.out.println(firstInteger + " is not divisible by " + secondInteger);
         }
         System.out.println();
+        // ternary operator
+       // if (firstInteger % secondInteger == 0) ? (firstInteger + " is divisible by " + secondInteger) : (firstInteger + " is not divisible by " + secondInteger);
 
         if (firstInteger % 2 == 0) {
             System.out.println(firstInteger + " is even");            
@@ -65,5 +68,5 @@ public class PartOne {
             System.out.println("The quotient is quite large");            
         }
     }
-    
+
 }
