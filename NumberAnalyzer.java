@@ -14,8 +14,8 @@ public class NumberAnalyzer {
 
         while (true) {
             System.out.print("Enter a number: ");
-            String input = scanner.nextLine(); // taking a string
-
+            String input = scanner.nextLine(); 
+            
             if (input.equals("exit")) {
                 break;
             }
@@ -24,7 +24,7 @@ public class NumberAnalyzer {
             // break;
             // }
 
-            int number = Integer.valueOf(input); // converting a string to an integer
+            int number = Integer.valueOf(input); 
             totalNumbers++;
             sumOfNumbers += number;
 
