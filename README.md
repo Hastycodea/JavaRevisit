@@ -7,3 +7,6 @@ This program accepts numerical input from the user and performs various calculat
 
 ## Part TwoOne (2.2)
 This Java program, **Sequence Analysis**, performs several tasks. For input handling, it prompts the user to enter two integers: `start` and `end`, ensuring that `start` is less than `end`. For counting and summation, it calculates and prints the count of integers between `start` and `end` (inclusive), the sum of all integers between `start` and `end` (inclusive), and the factorial of the sum obtained. The program implements methods for counting numbers, summing numbers, and calculating the factorial of a number. Additionally, it handles invalid inputs by prompting the user to re-enter valid values.
+
+## Part TwoThree (2.3)
+This Java program prints a simplified representation of the American flag using asterisks (*) for the stars and equals signs (=) for the stripes. It demonstrates the use of loops, methods, and basic console output to create a pattern.
