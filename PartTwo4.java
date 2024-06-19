@@ -7,13 +7,11 @@ public class PartTwo4 {
         int height = Integer.valueOf(scanner.nextLine());
 
         for (int i = 1; i <= height; i++) {
-            int number = (2 * i) - 1;
+            int width = (2 * i) - 1;
             int space = height - i;
 
-            if (number % 2 == 1) {
-                printSpaces(space);
-                printNumber(i);
-            }
+            printSpaces(space);
+            printNumber(i, width);
 
             System.out.println();
         }
@@ -25,9 +23,9 @@ public class PartTwo4 {
         }
     }
 
-    public static void printNumber(int number) {
-        for (int i = 1; i <= number; i++) {
-            System.out.print(i);
+    public static void printNumber(int number, int width) {
+        for (int i = 0; i < width; i++) {
+            System.out.print(number);
         }
     }
 }
