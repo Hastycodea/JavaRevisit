@@ -12,7 +12,7 @@ public class Part3 {
         numbers.add(2);
         numbers.add(42);
 
-        // numbers.remove(3);
+        numbers.remove(3);
 
         if (numbers.contains(15)) {
             System.out.println("number found!");
