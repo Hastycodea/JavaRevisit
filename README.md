@@ -10,3 +10,6 @@ This Java program, **Sequence Analysis**, performs several tasks. For input hand
 
 ## Part TwoThree (2.3)
 This Java program prints a simplified representation of the American flag using asterisks (*) for the stars and equals signs (=) for the stripes. It demonstrates the use of loops, methods, and basic console output to create a pattern.
+
+## Part Three (3.0)
+This Java program demonstrates basic operations on an ArrayList of integers. It includes adding and removing elements, searching for a specific value, finding the index of the smallest number, calculating the sum of all numbers in the list, and printing the list of numbers. The program consists of a main method and three additional methods that perform specific tasks.
