@@ -13,3 +13,6 @@ This Java program prints a simplified representation of the American flag using 
 
 ## Part Three (3.0)
 This Java program demonstrates basic operations on an ArrayList of integers. It includes adding and removing elements, searching for a specific value, finding the index of the smallest number, calculating the sum of all numbers in the list, and printing the list of numbers. The program consists of a main method and three additional methods that perform specific tasks.
+
+## Part ThreeOne (3.1)
+The PartThreeOne program is a simple Java application that takes a sentence as input from the user, processes the sentence to extract words, checks for the presence of the word "java", and identifies the longest word in the sentence. The program utilizes basic Java constructs such as Scanner for input, ArrayList for dynamic array management, and simple control flow statements.
