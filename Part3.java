@@ -23,6 +23,7 @@ public class Part3 {
         smallestNumberIndex(numbers);
         sumInList(numbers);
         printNumbers(numbers);
+        printNumbersDifferent(numbers);
 
     }
 
@@ -53,5 +54,14 @@ public class Part3 {
         }
         int lastNumber = numbers.get(numbers.size() - 1);
         System.out.println(lastNumber);
+    }
+
+    public static void printNumbersDifferent(ArrayList<Integer> numbers) {
+        for (int i = 0; i < numbers.size(); i++) {
+            System.out.print(numbers.get(i));
+            if (i < numbers.size() - 1) {
+                System.out.print(", ");
+            }
+        }
     }
 }
