@@ -48,12 +48,13 @@ public class Part3 {
     }
 
     public static void printNumbers(ArrayList<Integer> numbers) {
-        for (int i = 0; i < numbers.size() - 1; i++) {
-            System.out.print(numbers.get(i) + ", ");
-
+        for(int i = 0; i < numbers.size(); i++) {
+            if (i > 0) {
+                System.out.print(", ");
+            }
+            System.out.print(numbers.get(i));
         }
-        int lastNumber = numbers.get(numbers.size() - 1);
-        System.out.println(lastNumber);
+        System.out.println();
     }
 
     public static void printNumbersDifferent(ArrayList<Integer> numbers) {
