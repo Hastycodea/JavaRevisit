@@ -16,3 +16,7 @@ This Java program demonstrates basic operations on an ArrayList of integers. It 
 
 ## Part ThreeOne (3.1)
 The PartThreeOne program is a simple Java application that takes a sentence as input from the user, processes the sentence to extract words, checks for the presence of the word "java", and identifies the longest word in the sentence. The program utilizes basic Java constructs such as Scanner for input, ArrayList for dynamic array management, and simple control flow statements.
+
+## Part Four (4.0)
+This Java program allows users to input details about movies and then display the information based on user preference. It includes a Movie class that represents a movie with attributes for the title, director's name, and release year. The Part4 class contains the main method, which prompts the user to enter movie details and stores each movie as an object in an ArrayList. After the input process, the program asks the user whether they want to print all movie information or just the titles, and then displays the requested information. The program demonstrates the use of objects in a list to manage and display data in a structured manner.
+
