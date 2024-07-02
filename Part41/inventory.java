@@ -14,25 +14,33 @@ public class inventory {
         System.out.print("Category: ");
         String categoryInput = scanner.nextLine();
 
-        int sum = 0;
+        int sumQuantity = 0;
+        int sumTotalRevenue = 0;
 
         try(Scanner scan = new Scanner(Paths.get(fileInput))) {
             while (scan.hasNextLine()) {
                 String line = scan.nextLine();
                 String[] parts = line.split(",");
 
+                String productName = parts[0];
                 String category = parts[1];
                 int quantity = Integer.valueOf(parts[2]);
+                int totalRevenue = Integer.valueOf(parts[3]);
 
                 if (category.equals(categoryInput)) {
-                    sum += quantity;
+                    sumQuantity += quantity;
+                    sumTotalRevenue += totalRevenue;
                 }
             }
             
         } catch (Exception e) {
-            System.out.println("Error: ");
+            System.out.println("Error: " + e.getMessage());
         }
 
-        System.out.println("Products Sold: " + sum);
+        double average = sumTotalRevenue * 1.0 / sumQuantity;
+
+        System.out.println("Products Sold: " + sumQuantity);
+        System.out.println("Total Revenue: " + sumTotalRevenue);
+        System.out.println("Average Revenue per Product: " + average);
     }
 }
