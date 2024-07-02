@@ -20,3 +20,6 @@ The PartThreeOne program is a simple Java application that takes a sentence as i
 ## Part Four (4.0)
 This Java program allows users to input details about movies and then display the information based on user preference. It includes a Movie class that represents a movie with attributes for the title, director's name, and release year. The Part4 class contains the main method, which prompts the user to enter movie details and stores each movie as an object in an ArrayList. After the input process, the program asks the user whether they want to print all movie information or just the titles, and then displays the requested information. The program demonstrates the use of objects in a list to manage and display data in a structured manner.
 
+## Part Four One (4.1)
+This Java program reads an inventory file and calculates the total quantity, total revenue, and average revenue per product for a specified category. The application prompts the user for a file name and category, reads the inventory data from the specified file, and calculates the total quantity and total revenue for the specified category. It also computes the average revenue per product for the specified category and handles potential errors gracefully, informing the user if any issues arise.
+
