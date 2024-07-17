@@ -15,6 +15,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{ name=" + this.name; 
+        return "Person{name='" +this.name+"',id='"+this.id+"',gender=" +this.gender+"',county='"+this.county+"'}";
     }
 }
