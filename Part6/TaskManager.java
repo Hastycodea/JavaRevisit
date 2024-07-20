@@ -3,16 +3,18 @@ package Part6;
 import java.util.ArrayList;
 
 public class TaskManager {
-    private ArrayList<String> tasks;
+    private ArrayList<Task> tasks;
     private ArrayList<Employee> employees;
+    public int priority;
+
 
     public TaskManager() {
         this.tasks = new ArrayList<>();
         this.employees = new ArrayList<>();
     }
 
-    public void addTask(String task) {
-        this.tasks.add(task);
+    public void addTask(String description, String deadline, int priority) {
+        this.tasks.add(new Task(description, deadline, priority));
     }
 
     public void registerEmployee(String name, String id) {
@@ -20,11 +22,15 @@ public class TaskManager {
     }
 
     public void assignTask(String id, String task) {
-        for(Employee employee : this.employees) {
+        for (Employee employee : this.employees) {
             if (employee.getId().equals(id)) {
                 String name = employee.getName();
             }
         }
+    }
+
+    public void inProgress(String task) {
+        
     }
 
 }
