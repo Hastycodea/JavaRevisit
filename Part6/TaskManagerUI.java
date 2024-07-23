@@ -20,8 +20,7 @@ public class TaskManagerUI {
                     "3. Assign Task\r\n" + //
                     "4. Mark Task In Progress\r\n" + //
                     "5. Mark Task Completed\r\n" + //
-                    "6. View Tasks by \r\n" + //
-                    "Employee\r\n" + //
+                    "6. View Tasks by Employee\r\n" + //
                     "7. View Task History\r\n" + //
                     "8. Exit");
             System.out.print("Enter choice: ");
@@ -61,13 +60,45 @@ public class TaskManagerUI {
                 System.out.println();
 
             } else if (choice.equals("3")) {
+                System.out.print("Employee ID: ");
+                String id = scanner.nextLine();
+
+                System.out.print("Task Description: ");
+                String description = scanner.nextLine();
+
+                task.assignTask(id, description);
+
+                System.out.println();
+                System.out.println("Task assigned successfully.");
+                System.out.println();
 
             } else if (choice.equals("4")) {
+                System.out.print("Task Description: ");
+                String description = scanner.nextLine();
+
+                task.inProgress(description);
+
+                System.out.println();
+
+                System.out.println("Task marked as in progress.");
 
             } else if (choice.equals("5")) {
+                System.out.print("Task Description: ");
+                String description = scanner.nextLine();
+                
+                task.isCompleted(description);
+
+                System.out.println();
+                System.out.println("Task marked as completed.");
+                System.out.println();
 
             } else if (choice.equals("6")) {
+                System.out.print("Employee ID: ");
+                String id = scanner.nextLine();
 
+                System.out.println();
+                task.view(id);
+                System.out.println();
             }
 
         }
