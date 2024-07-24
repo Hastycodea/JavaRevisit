@@ -38,6 +38,8 @@ public class TaskManager {
 
     public void view(String id) {
         String name = "";
+        String status = "";
+
         
         for (Employee employee : employees) {
             if (employee.getId().equals(id)) {
@@ -45,16 +47,34 @@ public class TaskManager {
             }
         }
 
-        String task = this.assign.get(id);
+        ArrayList<String> items = new ArrayList<>();
 
-        String status = "";
+        for(String identity : this.assign.keySet()) {
+            String task = this.assign.get(identity);
+            items.add(task);
 
-        if (isCompleted(task)) {
-            status = "Completed";            
+
+        }
+        System.out.println("Tasks assigned to " +name+ ":");
+
+        int i = 1;
+        for(String item : items) {
+
+            if (inProgress(item)) {
+                status = "in Progress";
+            } 
+            
+            if ((isCompleted(item) && inProgress(item)) || isCompleted(item)) {
+                status = "Completed";            
+            }
+
+            System.out.print(i + ". ");
+            System.out.println(item + " - " + status);
+
+            i++;
+
         }
 
-        System.out.println("Tasks assigned to " +name+ ":");
-        System.out.println(task + " - " + status);
     }
 
 }
