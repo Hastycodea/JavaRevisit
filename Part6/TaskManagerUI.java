@@ -1,6 +1,7 @@
 package Part6;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class TaskManagerUI {
@@ -12,7 +13,6 @@ public class TaskManagerUI {
     public TaskManagerUI(TaskManager task, Scanner scanner) {
         this.task = task;
         this.scanner = scanner;
-        this.list = new ArrayList<>();
     }
     
 
@@ -49,7 +49,6 @@ public class TaskManagerUI {
                 System.out.println("Task added successfully.");
                 System.out.println();
 
-                this.list.add("Added task: " + description);
                                 
             } else if (choice.equals("2")) {
                 System.out.print("Employee name: ");
@@ -64,8 +63,6 @@ public class TaskManagerUI {
                 System.out.println("Employee registered successfully.");
                 System.out.println();
 
-                this.list.add("Registerd employee: " + name);
-
             } else if (choice.equals("3")) {
                 System.out.print("Employee ID: ");
                 String id = scanner.nextLine();
@@ -79,47 +76,51 @@ public class TaskManagerUI {
                 System.out.println("Task assigned successfully.");
                 System.out.println();
 
-                this.list.add("Assigned task: " + description);      
-
             } else if (choice.equals("4")) {
                 System.out.print("Task Description: ");
                 String description = scanner.nextLine();
 
-                task.inProgress(description);
+                task.markInProgress(description);
 
                 System.out.println();
 
                 System.out.println("Task marked as in progress.");
 
-                this.list.add("Marked task as in progress: " + description);
 
             } else if (choice.equals("5")) {
                 System.out.print("Task Description: ");
                 String description = scanner.nextLine();
-                
-                task.isCompleted(description);
 
+                task.markAsCompleted(description);
+                
                 System.out.println();
                 System.out.println("Task marked as completed.");
                 System.out.println();
-
-                this.list.add("Marked task as completed: " + description);
 
             } else if (choice.equals("6")) {
                 System.out.print("Employee ID: ");
                 String id = scanner.nextLine();
 
                 System.out.println();
-                task.view(id);
-                System.out.println();
-            } else if (choice.equals("7")) {
-                System.out.println("Task History: ");
 
                 int i = 1;
-                for(String item : this.list) {
-                    System.out.println(i+ ". "+ item);
+                ArrayList<Task> items = task.viewTasks(id);
+                for(Task item : items) {
+                    System.out.println(i + ". "+item);
                     i++;
                 }
+                System.out.println();
+
+            } else if (choice.equals("7")) {
+                System.out.println("Task History: ");
+                
+                int i = 1;
+                ArrayList<String> items = task.viewHistory();
+                for(String item : items) {
+                    System.out.println(i +". " + item);
+                    i++;
+                }
+                
                 System.out.println();
             }
 
