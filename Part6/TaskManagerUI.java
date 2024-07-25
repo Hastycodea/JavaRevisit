@@ -1,14 +1,12 @@
 package Part6;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class TaskManagerUI {
 
     private TaskManager task;
     private Scanner scanner;
-    private ArrayList<String> list;
 
     public TaskManagerUI(TaskManager task, Scanner scanner) {
         this.task = task;
@@ -104,9 +102,9 @@ public class TaskManagerUI {
                 System.out.println();
 
                 int i = 1;
-                ArrayList<Task> items = task.viewTasks(id);
-                for(Task item : items) {
-                    System.out.println(i + ". "+item);
+                ArrayList<Task> tasks = task.viewTasks(id);
+                for(Task task : tasks) {
+                    System.out.println(i + ". "+task);
                     i++;
                 }
                 System.out.println();
