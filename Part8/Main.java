@@ -12,7 +12,9 @@ public class Main {
     public static void startContainer() {
         while(true) {
             Scanner scanner = new Scanner(System.in);
-            System.out.println();
+
+            ContainerInfo container = new ContainerInfo();
+
             System.out.print(
                 "Welcome to the Liquid Container Registry!\n" + //
                 "1. Add a Liquid Container\n" + //
@@ -22,10 +24,39 @@ public class Main {
                 "5. Print All Containers\n" + //
                 "6. Compare Container Volumes\n" + //
                 "7. Exit\n" + //
-                "Please select an option:"
+                "Please select an option: "
             );
 
-            String option = scanner.nextLine();
+            int choice = Integer.valueOf(scanner.nextLine());
+            System.out.println();
+
+            if (choice == 7) {
+                break;                
+            } else if (choice == 1) {
+                System.out.print("Enter container name: ");
+                String name = scanner.nextLine();
+                System.out.print("Enter volume: ");
+                int volume = Integer.parseInt(scanner.nextLine());
+
+                container.addLiquid(name, volume);
+                System.out.println();
+
+            } else if (choice == 2) {
+                container.averageVolume();
+
+            } else if (choice == 3) {
+
+            } else if (choice == 4) {
+
+            } else if (choice == 5) {
+
+            } else if (choice == 6) {
+
+            } else {
+                System.out.println("Invalid input, try again");
+                System.out.println();
+            }
+
         }
     }
 

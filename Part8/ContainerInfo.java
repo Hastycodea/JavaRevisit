@@ -1,7 +1,6 @@
 package Part8;
 
 import java.util.HashMap;
-import java.util.List;
 
 public class ContainerInfo {
 
@@ -15,10 +14,10 @@ public class ContainerInfo {
 
     public void addLiquid(String name, int volume) {
 
-        if(!containerVolume.containsKey(name) && volume < 0) {
+        if(!containerVolume.containsKey(name) && volume > 0) {
             containerVolume.put(name, volume);
 
-        } else if(containerVolume.containsKey(name) && volume < 0){
+        } else if(containerVolume.containsKey(name) && volume > 0){
             int totalVolume = containerVolume.get(name) + volume;
             containerVolume.put(name, totalVolume);
 
@@ -28,13 +27,8 @@ public class ContainerInfo {
     }
 
     public void averageVolume() {
-        List<Integer> volumes = containerVolume.values().stream().toList();
-        int sum = 0;
-        for(int vol : volumes) {
-            sum += vol;
-        }
-
-        double average = sum / volumes.size();
+        int total = containerVolume.values().stream().mapToInt(Integer::intValue).sum();
+        double average = (double) total / containerVolume.size();
         System.out.println("The average is "+ average);
     }
 
