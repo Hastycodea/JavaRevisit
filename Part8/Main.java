@@ -10,10 +10,12 @@ public class Main {
     }
 
     public static void startContainer() {
-        while(true) {
-            Scanner scanner = new Scanner(System.in);
+        
+        Scanner scanner = new Scanner(System.in);
+        ContainerInfo container = new ContainerInfo();
 
-            ContainerInfo container = new ContainerInfo();
+        while(true) {
+
 
             System.out.print(
                 "Welcome to the Liquid Container Registry!\n" + //
@@ -45,8 +47,20 @@ public class Main {
                 container.averageVolume();
 
             } else if (choice == 3) {
+                System.out.print("Enter container name: ");
+                String name = scanner.nextLine();
+                container.getContainerVolume(name);
+                System.out.println();
 
             } else if (choice == 4) {
+                System.out.print("Enter container name: ");
+                String name = scanner.nextLine();
+
+                System.out.print("Enter container nickname: ");
+                String nickName = scanner.nextLine();
+
+                container.addNickName(name, nickName);
+                System.out.println();
 
             } else if (choice == 5) {
 
