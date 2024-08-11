@@ -10,7 +10,7 @@ public class Main {
     }
 
     public static void startContainer() {
-        
+
         Scanner scanner = new Scanner(System.in);
         ContainerInfo container = new ContainerInfo();
 
@@ -22,17 +22,18 @@ public class Main {
                 "1. Add a Liquid Container\n" + //
                 "2. Calculate the Average Volume\n" + //
                 "3. Retrieve a Container's Volume\n" + //
-                "4. Generate Nicknames\n" + //
+                "4. Add Nickname\n" + //
                 "5. Print All Containers\n" + //
                 "6. Compare Container Volumes\n" + //
-                "7. Exit\n" + //
+                "7. Generate nicknames\n" + //
+                "8. Exit\n" + //
                 "Please select an option: "
             );
 
             int choice = Integer.valueOf(scanner.nextLine());
             System.out.println();
 
-            if (choice == 7) {
+            if (choice == 8) {
                 break;                
             } else if (choice == 1) {
                 System.out.print("Enter container name: ");
@@ -63,8 +64,24 @@ public class Main {
                 System.out.println();
 
             } else if (choice == 5) {
+                container.printAllContainers();
+                System.out.println();
 
             } else if (choice == 6) {
+                System.out.print("Enter first container's name: ");
+                String firstName = scanner.nextLine();
+                System.out.print("Enter second container's name: ");
+                String secondName= scanner.nextLine();
+
+                container.compareVolume(firstName, secondName);
+                System.out.println();
+
+            } else if (choice == 7) {
+                System.out.print("Enter the container name: ");
+                String name = scanner.nextLine();
+
+                container.generateNickNames(name);
+                System.out.println();
 
             } else {
                 System.out.println("Invalid input, try again");
