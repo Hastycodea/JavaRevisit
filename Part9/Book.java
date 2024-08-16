@@ -13,7 +13,6 @@ public class Book extends AbstractReadingMaterial {
         this.description = description;
     }
 
-    @Override
     public String getType() {
         return "Book";
     }

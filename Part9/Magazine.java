@@ -1,5 +1,6 @@
 package Part9;
 
+
 public class Magazine extends AbstractReadingMaterial{
 
     private String title;
@@ -9,11 +10,17 @@ public class Magazine extends AbstractReadingMaterial{
     private int issueNumber;
     private String description;
 
-    public Magazine(String title, String author, String ISBN, String type) {
+    public Magazine(String title, String author, String ISBN, String type, int issueNumber, String description) {
         super(title, author, ISBN, type);
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
+        this.type = type;
+        this.issueNumber = issueNumber;
+        this.description = description;
+
     }
 
-    @Override
     public String getType() {
         return "Magazine";
     }

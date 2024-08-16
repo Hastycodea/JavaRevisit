@@ -10,14 +10,17 @@ public class FictionBook extends Book {
 
     public FictionBook (String title, String author, String ISBN, String type, String description) {
         super(title, author, ISBN, type, description);
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
+        this.type = type;
+        this.description = description;
     }
 
-    @Override
     public String getType() {
         return "Fiction Book";
     }
 
-    @Override
     public String getDescription() {
         return description;
     }
@@ -27,6 +30,10 @@ public class FictionBook extends Book {
         return "FictionBook [title=" + title + ", author=" + author + ", ISBN=" + ISBN + ", type=" + type
                 + ", description=" + description + "]";
     }
+
+    
+
+    
 
     
     
