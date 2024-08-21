@@ -3,24 +3,36 @@ import java.util.List;
 
 public class UserData {
 
-    private List<UserDetails> userDetailsList;
-    private UserDetails userDetails;
 
-    public UserData() {
-        userDetailsList = new ArrayList<>();
-    }
+    public static List<String> formatUserData(List<String> userData) {
 
-    public void formatUserData(List<String> users) {
-        for (String user : users) {
+
+        String regex = "[0-9]{3}-[0-9]{3}";
+        List<String> results = new ArrayList<>();
+
+        for (String user : userData) {
             String[] userParts = user.split(":");
+            if (userParts.length != 3) {
+                continue;
+            }
             String name = userParts[0];
             String role = userParts[1];
             String id = userParts[2];
 
-            if (userDetails.isRole(role) && userDetails.isId(id)) {
-                userDetailsList.add(new UserDetails(name, role, id));
+            //verifying role, and id
+            try {
+                UserRole userRole = UserRole.valueOf(role);
+                if (id.matches(regex)) {
+                    StringBuilder sb = new StringBuilder();
+                    String result = sb.append("User: "+name+" (" +userRole+"), ID: "+id).toString(); 
+                    results.add(result);               
+                }
+                
+            } catch (Exception e) {
+                continue;
             }
             
         }
+        return results;
     }
 }

@@ -1,11 +1,8 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
-        UserData data = new UserData();
 
         List<String> userData = Arrays.asList(
             "Alice:ADMIN:123-456",
@@ -15,10 +12,11 @@ public class Main {
             "Mallory:ADMIN:12-34X"
         );
 
-        data.formatUserData(userData);
+        List<String> results = UserData.formatUserData(userData);
 
-        System.out.println(userData.toString());
-        
+        for(String result : results) {
+            System.out.println(result);
+        }
 
     }
 }
