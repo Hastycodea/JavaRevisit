@@ -1,5 +1,8 @@
 package Part8;
 
+//class not used in the example
+//can be deleted
+
 public class Container {
     
     private String name;
